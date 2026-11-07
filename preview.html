@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>Gmail signature</title>
+</head>
+<body style="margin:40px; background:#ffffff;">
+
+<p style="font-family:Arial, sans-serif; font-size:15px; color:#888;">
+  PREVIEW only (image loads from this folder). For Gmail use signature.html.
+</p>
+<hr style="border:0; border-top:1px dashed #ccc; margin:20px 0 30px;">
+
+
+<div id="sig">
+<!-- SIGNATURE START -->
+<table cellpadding="0" cellspacing="0" width="600" style="border-collapse:collapse; width:600px;">
+  <tr>
+    <td rowspan="2" width="170" style="width:170px; padding:0; vertical-align:top;">
+      <img src="images/nikoloz-banner.jpg" width="170" height="180" alt="Nikoloz Omanidze" style="display:block; width:170px; height:180px; border:0;">
+    </td>
+    <td width="290" height="150" style="width:268px; height:150px; background:#1F2544; padding:0 0 0 22px; vertical-align:middle; font-family:Georgia, 'Times New Roman', serif;">
+      <div style="font-family:Arial, sans-serif; font-size:10px; letter-spacing:1.6px; color:#C9CCE0;">CHIEF DEVELOPMENT OFFICER</div>
+      <div style="font-size:22px; line-height:28px; letter-spacing:1px; color:#FFFFFF; margin-top:4px; white-space:nowrap;">NIKOLOZ OMANIDZE</div>
+      <div style="font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:20px; letter-spacing:0.3px; color:#E4E6F0; margin-top:8px;">
+        <a href="tel:+995591446365" style="color:#E4E6F0; text-decoration:none; font-family:Arial, Helvetica, sans-serif;"><span style="color:#E4E6F0; text-decoration:none; font-family:Arial, Helvetica, sans-serif;">+995 591 446 365</span></a><br>
+        <a href="mailto:omanidze.nika@gmail.com" style="color:#E4E6F0; text-decoration:none; font-family:Arial, Helvetica, sans-serif;"><span style="color:#E4E6F0; text-decoration:none; font-family:Arial, Helvetica, sans-serif;">omanidze.nika@gmail.com</span></a><br>
+        <a href="https://www.linkedin.com/in/nikoloz-omanidze-356626217/" style="color:#E4E6F0; text-decoration:none; font-family:Arial, Helvetica, sans-serif;"><span style="color:#E4E6F0; text-decoration:none; font-family:Arial, Helvetica, sans-serif;">linkedin.com/in/nikoloz-omanidze</span></a>
+      </div>
+    </td>
+    <td width="140" height="150" style="width:118px; height:150px; background:#1F2544; padding:0 22px 0 0; vertical-align:middle; text-align:right; font-family:Georgia, 'Times New Roman', serif;">
+      <div style="font-size:22px; line-height:26px; color:#FFFFFF;">BetterStep</div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" height="30" style="height:30px; background:#E9EAF0; font-size:0; line-height:0;">&nbsp;</td>
+  </tr>
+</table>
+<!-- SIGNATURE END -->
+</div>
+
+<script>
+function copySig() {
+  var el = document.getElementById("sig");
+  var range = document.createRange();
+  range.selectNodeContents(el);
+  var sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+  var ok = false;
+  try { ok = document.execCommand("copy"); } catch (e) {}
+  sel.removeAllRanges();
+  document.getElementById("copyMsg").textContent = ok
+    ? "Copied. Now paste it in Gmail (Ctrl/Cmd + V)."
+    : "Copy failed. Select the signature with the mouse and press Ctrl/Cmd + C.";
+}
+</script>
+
+</body>
+</html>
